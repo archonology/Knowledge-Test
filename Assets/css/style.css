@@ -14,7 +14,7 @@ header {
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     row-gap: var(--distance);
     column-gap: var(--distance);
     padding: var(--distance);
@@ -23,16 +23,28 @@ header {
 .card {
     display: block;
     background-color:	#202d52;
-    border: 1px solid #4c6e85;
+    border: 3px solid #4c6e85;
     border-radius: 8px;
-    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
-    margin: 60px auto;
+    margin: 30px auto;
     padding: 20px;
     width: 80vw;
     height: 600px;
   }
 
+
 .quizCard1 {
   flex: 1;
 }
+
+.timer {
+    width: 60vw;
+    height: 100px;
+    background: #13293d;
+    color: #fff;
+    text-align: center;
+    border: 3px solid rgba(9, 9, 9, 0.529);
+  }
+  
+  .timer-text {
+    padding: 20px;
+  }
