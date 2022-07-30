@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript Quiz</title>
+  <link rel="stylesheet" href="./Assets/css/jass.css" />
+  <link rel="stylesheet" href="./Assets/css/style2.css" />
+
+</head>
+<header id="top">
+    <h3 class="view-high-scores" id="click-for-scores" >View High Scores</h3>
+    <h3 class="timer-count">60</h3>
+</header>
+<body class="bg-dark text-light text-left">
+    <main id="root">
+  <!-- the empty div for the test to run in / high scores to show -->
+    <div class="quiz-box" id="title"></div>
+
+    <ul>
+        <li class="alternative option-A"></li>
+        <li class="alternative option-B"></li>
+        <li class="alternative option-C"></li>
+        <li class="alternative option-D"></li>
+    </ul>
+
+    <div class="right-or-wrong">
+        <h3 class="right-line" hidden>Right!</h2>
+        <h3 class="wrong-line" hidden>Oops! -5 seconds :(</h2>
+    </div>
+    
+    <div>
+        <h2 class="user-initials"></h2>
+        <h2 class="user-score"></h2>
+    </div>
+</main>
+  <!-- Added link to the jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <script type="text/javascript" src="./Assets/javascript/script.js"></script>
+</body>
+
+</html>

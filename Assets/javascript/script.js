@@ -1,85 +1,100 @@
-var questions = document.querySelector(".display-questions");
-var initials = document.querySelector(".initials")
-var score = document.querySelector(".score");
 var timerElement = document.querySelector(".timer-count");
-var startButton = document.querySelector(".start-button");
+var quizBox = document.querySelector(".quiz-box");
+var rightChoice = document.querySelector(".right-line");
+var wrongChoice = document.querySelector(".wrong-line");
+var timeLeft = 60;
+var score = 0;
 
-var questions = [];
-var finalScore;
-var isComplete = false;
-var timer;
-var timerCount;
+//these variables are through jquery
+var $rootEl = $("#root");
+var $answersLine = $("ul");
+var $timerStyle = $(".timer-count");
 
-//call the score and initials at reload
-function init() {
-    getInitials();
-    getScore();  
-  }
+$timerStyle.attr("class", "time-style");
+$answersLine.children().addClass('bg-light text-dark mb-3 p-3').css('border-radius', '.4rem');
 
-// The startGame function is called when the start button is clicked
- function startQuiz() {
-    isComplete = false;
-    timerCount = 100;
-    // Prevents start button from being clicked when round is in progress
-    startButton.disabled = true;
-    renderBlanks()
-    startTimer()
-  }
+console.log(score);
 
-  function finishQuiz() {
-    wordBlank.textContent = "Good Job!";
-    startButton.disabled = false;
-    setInitials();
-    setScore();
-  }
+//here is the variable for the quiz questions
+let question = {
+    
+    title: "1. What is a method a property of?",
+    alternatives: ["an object","a string","a boolean", "an attribute"],
+    correctAnswer: 0,
 
-timerElement.addEventListener("click", function(event) {
-var timer = setInterval(function() {
-    timerCount--;
-    timerElement.textContent = timerCount + "Time Remaining";
+    title: "2. What is Next?",
+    alternatives: ["a", "b", "c", "d"],
+    correctAnswer: 3,
 
-    if(timerCount >= 0) {
-        
-        if(isComplete && timerCount > 0) {
-        clearInterval(timer);
-        finishQuiz();
+    title: "3. What is Now?",
+    alternatives: ["a", "b", "c", "d"],
+    // correctAnswer: 2,
+
+    title: "4. What is What?",
+    alternatives: ["a", "b", "c", "d"],
+    correctAnswer: 1
+};
+
+//event listeners
+
+//function for the quiz generating
+function showQuestion(q) {
+    let titleDiv = document.getElementById("title");
+    titleDiv.textContent = q.title;
+
+    let alts = document.querySelectorAll('.alternative');
+    alts.forEach(function(element, index) {
+      element.textContent = q.alternatives[index];
+
+      //bringing in the event listeners to the alts!
+      element.addEventListener("click",function(){
+        console.log("Clicked!");
+
+
+        if (q.correctAnswer == index) {
+            console.log("Right!");
+            score++;
+            console.log(score);
+            //rightChoice.setAttribute("visible");
+
+        } else {
+            console.log("Better luck next time!");
         }
-    }
-}, 1000);
-})
+        
+        //for (var i = 0; i < q.length; i++) {
+           
+        //};
 
-questions.addEventListener("click", function(event) {
-questions.textContent = "How do you code?";
+      });
+    });
+}
 
-});
+showQuestion(question);
+
+//this function manages the timer
+function quizTime() {
+    var timerInterval = setInterval(() => {
+        timeLeft--;
+        timerElement.textContent = timeLeft;
+
+        if(timeLeft === 0) {
+            clearInterval(timerInterval);
+            sendMessage();
+
+        }
+
+    }, 1000);
+};
+//for when the timer is up -this message is displayed
+function sendMessage() {
+timerElement.textContent = "time's up!";
+}
+//repeat quiz time on page refresh
+//quizTime();
 
 
-//start button function
-//function startGame() {
-  //  isWin = false;
-    //timerCount = 100;
-    // Prevents start button from being clicked when round is in progress
-    //startButton.disabled = true;
-    //renderBlanks()
-    //startTimer()
-  //}
 
-  //need timer function
-//function setTime() {
-    // Sets interval in variable
-    //var timerInterval = setInterval(function() {
-      //secondsLeft--;
-      //timeEl.textContent = secondsLeft + "Time Remaining";
-  
-      //if(secondsLeft === 0) {
-        // Stops execution of action at set interval
-        //clearInterval(timerInterval);
-        // Calls function to create and append image
-        //sendMessage();
- //     }
-  
-   // }, 1000);
-//}
-//need question function
-
-//need function for storing leaderboard/getting user info
+ //for(var i = 0; i < number; i++) {
+            // new number is now equal to line 16 new number value plus the returned line 17 function value
+            //newNumber = newNumber + nameOfFunction();
+        //}

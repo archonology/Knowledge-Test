@@ -1,9 +1,11 @@
+var startButton = document.getElementById("start-button");
 var timerElement = document.querySelector(".timer-count");
-var correct = document.querySelector(".correct")
-var incorrect = document.querySelector(".incorrect")
-var startTest = document.querySelector(".start-button");
-var quizQuestions = document.querySelector(".display-questions");
+var quizBox = document.querySelector(".quiz-box");
+var rightChoice = document.querySelector(".right-line");
+var wrongChoice = document.querySelector(".wrong-line");
+
 var timeLeft = 60;
+var score = 0;
 
 //here is where the quiz questions live
 var questionsArray = [ {
@@ -35,65 +37,10 @@ var questionsArray = [ {
         d: "Fun and action mixed together",
     },
     correctAnswer: "a"
-}
-];
-
-//function for managing the timer
-function quizTime() {
-    var timerInterval = setInterval(() => {
-        timeLeft--;
-        timerElement.textContent = timeLeft;
-
-        if(timeLeft === 0) {
-            clearInterval(timerInterval);
-            sendMessage();
-
-        }
-
-    }, 1000);
-}
-
-function sendMessage() {
-timerElement.textContent = "time's up!";
-}
-
-quizTime();
-
-function quizStart() {
-    //variable to store the HTML output
-    var output = [];
-//for each question..
-    questionsArray.forEach(
-        (currentQuestion, questionNumber)=> {
-
-            //variable to list the answers
-            var answers = [];
-
-            // for each answer
-            for(letter in currentQuestion.answers){
-
-                // add on an HTML radio button
-                answers.push(
-                    <label>
-                        <input type="radio" name="question${questionNumber}" value="${letter}">
-                            ${letter} :
-                            ${currentQuestion.answers[letter]}</input>
-                    </label>
-                ); 
-            }
-
-            // add this question and its answers to the output
-            output.push(
-                `<,div class="question"> ${currentQuestion.question} </div>
-                <div class="answers"> ${answers.join('')} </div>`
-            );
-        }
-    );
-
-    // finally combine our output list into one string of HTML and put it in the page
-    quizQuestions.innerHTML = output.join('');
-}
+}];
 
 
-
-// https://www.sitepoint.com/simple-javascript-quiz/ is my key reference for building the test question part of the code.
+// set onclick attribute to all available options
+//for(i=0; i < option.length; i++){
+  //  option[i].setAttribute("onclick", "optionSelected(this)");
+///}
