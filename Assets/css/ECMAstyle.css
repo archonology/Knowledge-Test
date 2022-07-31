@@ -1,0 +1,96 @@
+:root {
+    --dark: rgb(23, 24, 27);
+    --darker: rgb(33, 25, 44);
+    --light: rgb(215, 220, 228);
+    --pink: rgb(216, 5, 128);
+    --gold: rgb(249, 187, 1);
+    --green: rgb(3, 147, 3);
+    --blue: rgb(50, 141, 246);
+    --red: rgb(251, 7, 7);
+
+   
+}
+
+body {
+    background-color: var(--darker);
+    color: var(--light);
+    margin: 1em;
+}
+
+header {
+    display: inline-block;
+    padding: 2em;
+}
+
+#view-scores:hover {
+    color: var(--gold);
+    cursor: grab;
+}
+
+#timer-count {
+    color: var(--pink);
+}
+
+#root {
+    border-bottom: 2px solid var(--light);
+}
+
+#card-quiz {
+    text-align: center;
+    margin-top: 3em;
+    font-size: large;
+}
+
+#start {
+    font-size: xx-large;
+    font-weight: bolder;
+    padding: 1em;
+}
+#start:hover {
+    color: var(--green);
+    cursor: grab;
+}
+
+.question {
+    font-size: xx-large;
+}
+
+.choice {
+    padding: 5px;
+    margin-left: 20em;
+    margin-right: 20em;
+    background-color: var(--light);
+    color: var(--dark);
+    border-radius: 8px;
+}
+
+#A:hover {
+    background-color: var(--gold);
+    cursor: grab;
+}
+
+#B:hover {
+    background-color: var(--green);
+    cursor: grab;
+}
+
+#C:hover {
+    background-color: var(--blue);
+    cursor: grab;
+}
+
+#D:hover {
+    background-color: var(--red);
+    cursor: grab;
+}
+
+#right {
+    color: var(--gold);
+}
+#wrong {
+    color: var(--blue);
+}
+
+#saved-user-card {
+    color: var(--gold);
+}

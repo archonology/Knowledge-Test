@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/css/jass.css">
+    <link rel="stylesheet" href="./Assets/css/ECMAstyle.css">
+    <title>ECMA Quiz</title>
+</head>
+<body>
+<header>
+    <h3 class="view-scores" id="view-scores" onclick="document.getElementById('saved-user-card').style.display='block'">View High Scores</h3>
+    <h1 class="timer-count" id="timer-count">30</h1>
+</header>
+    <main id="root">
+        
+        <div id="card-quiz">
+            <div id="start" onclick="quizTime()">Start Quiz</div>
+            <div id="quiz" style="display: none">
+            <h1 class="question" id="question"></h1>
+            <div id="choices">
+                <br>
+                <h2 class="choice" id="A" onclick="checkAnswer('A')"></h2> 
+                <br>
+                <h2 class="choice" id="B" onclick="checkAnswer('B')"></h2>
+                <br>
+                <h2 class="choice" id="C" onclick="checkAnswer('C')"></h2>
+                <br>
+                <h2 class="choice" id="D" onclick="checkAnswer('D')"></h2>
+                <br>
+                <br>
+                <p class="right" id="right" style="display: none"></p>   
+                <p class="wrong" id="wrong" style="display: none"></p>  
+        </div> 
+    </main> 
+    
+    <section>
+        <div id="score-card">
+        <div class="results" id="results"></div>
+        <br>
+        <div class="scoreboard" id="scoreboard" style="display: none"></div>
+        </div>
+    </section>
+    <form action="input" id="form" style="display: none">
+        <h2>Enter your score!</h2>
+        <input id="user" type="text"> initials</input>
+        <input id="user-score" type="text"> score</input>
+        <button id="save">SAVE</button>
+    </form>
+    <div id="saved-user-card" style="display: none">
+        <h2>Last Score</h2>
+        <p>Initials: <span id="saved-user"></span></p>
+        <p>Score: <span id="saved-score"></span></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="./Assets/javascript/JQscript.js"></script>
+    <script src="./Assets/javascript/ECMAscript.js"></script>
+</body>
+</html>
