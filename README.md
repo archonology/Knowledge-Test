@@ -26,10 +26,6 @@ I was able to pull a lot of the functions and objects from previous efforts to a
 - Complete!
 ------------
 A screenshot of the deployed page:
-<<<<<<< HEAD:Assets/README.md
-
-<img width="1728" alt="Screen Shot 2022-08-01 at 9 49 41 AM" src="https://user-images.githubusercontent.com/107374664/182177005-c45a2b4d-18e8-441b-b17c-9bac8509c763.png">
-=======
 
 <img width="1728" alt="Screen Shot 2022-08-01 at 9 49 41 AM" src="https://user-images.githubusercontent.com/107374664/182177005-c45a2b4d-18e8-441b-b17c-9bac8509c763.png">
 
@@ -38,10 +34,6 @@ A gif demo of deployed page:
 ![Coding Quiz Demo_Reed Meher](https://user-images.githubusercontent.com/107374664/182177146-da019d21-4fb5-4b9c-ae0f-54b99765803a.gif)
 
 >>>>>>> 14df48d9fe5f753635c6123960f3939019e6d8a8:README.md
-
-A gif demo of deployed page:
-
-![Coding Quiz Demo_Reed Meher](https://user-images.githubusercontent.com/107374664/182177146-da019d21-4fb5-4b9c-ae0f-54b99765803a.gif)
 
 ## Special Thanks
 
