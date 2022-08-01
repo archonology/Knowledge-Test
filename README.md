@@ -37,7 +37,7 @@ A gif demo of deployed page:
 
 ## Special Thanks
 
-special thanks to "CodeExpolainedRepo" on Github and Youtube (https://www.youtube.com/c/CodeExplained).  Their scrip† tutorials were especially helpful to my learning style and brought home a bunch of basic things that just weren't clicking for me. For example, I was nesting all my functions within one greater function, rather than stacking a number of smaller functions that all interlock through calling eachother, or executing in the stack order. I learned that functions are less like Troika dolls and more like threads on a spiderweb... and it blew my mind. :)
+special thanks to "CodeExpolainedRepo" on Github and Youtube (https://www.youtube.com/c/CodeExplained).  Their script tutorials were especially helpful to my learning style and brought home a bunch of basic things that just weren't clicking for me. For example, I was nesting all my functions within one greater function, rather than stacking a number of smaller functions that all interlock through calling eachother, or executing in the stack order. I learned that functions are less like Troika dolls and more like threads on a spiderweb... and it blew my mind. :)
 
 Cheers!
 
