@@ -4,15 +4,15 @@
     --light: rgb(215, 220, 228);
     --pink: rgb(216, 5, 128);
     --gold: rgb(249, 187, 1);
-    --green: rgb(3, 147, 3);
-    --blue: rgb(50, 141, 246);
+    --green: rgb(6, 211, 6);
+    --blue: rgb(10, 168, 253);
     --red: rgb(251, 7, 7);
 
    
 }
 
 body {
-    background-color: var(--darker);
+    background-color: var(--dark);
     color: var(--light);
     margin: 1em;
 }
@@ -22,23 +22,13 @@ header {
     padding: 2em;
 }
 
-#view-scores:hover {
-    color: var(--gold);
-    cursor: grab;
-}
-
 #timer-count {
     color: var(--pink);
 }
 
-#root {
+main {
     border-bottom: 2px solid var(--light);
-}
-
-#card-quiz {
     text-align: center;
-    margin-top: 3em;
-    font-size: large;
 }
 
 #start {
@@ -46,22 +36,66 @@ header {
     font-weight: bolder;
     padding: 1em;
 }
-#start:hover {
-    color: var(--green);
+
+#quiz {
+    margin-left: 20em;
+    margin-right: 20em;
+}
+
+#A {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+#B {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+#C {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+#D {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+#right {
+    color: var(--gold);
+
+}
+
+#wrong {
+    color: var(--red);
+}
+
+
+#saved-user-card {
+    color: var(--gold);
+}
+
+#view-scores:hover {
+    color: var(--gold);
     cursor: grab;
 }
 
-.question {
-    font-size: xx-large;
-}
-
-.choice {
-    padding: 5px;
-    margin-left: 20em;
-    margin-right: 20em;
-    background-color: var(--light);
-    color: var(--dark);
-    border-radius: 8px;
+#start:hover {
+    color: var(--green);
+    cursor: grab;
 }
 
 #A:hover {
@@ -84,13 +118,21 @@ header {
     cursor: grab;
 }
 
-#right {
-    color: var(--gold);
-}
-#wrong {
-    color: var(--blue);
+#save:hover {
+    background-color: var(--green);
 }
 
-#saved-user-card {
-    color: var(--gold);
+@media screen and (max-width: 850px){
+    #quiz{
+        margin-left: 5em;
+        margin-right: 5em;
+    }
 }
+
+@media screen and (max-width: 500px){
+    #quiz{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+    

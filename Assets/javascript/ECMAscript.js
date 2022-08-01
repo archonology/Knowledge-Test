@@ -40,51 +40,57 @@ let questions = [
     choiceD : "A way to get a boolean",
     correct : "A"
 }, {
-    question : "If you want the computer to run a number of recurring tasks from a single object, what do you need in your function?",
-    choiceA : "localStorage",
-    choiceB : "A for loop",
-    choiceC : "A degree frim MIT",
-    choiceD : "getElementbyId",
+    question : "What does 'var' stand for?",
+    choiceA : "various",
+    choiceB : "variable",
+    choiceC : "varies",
+    choiceD : "German pronounciation of 'wear'",
     correct : "B"
 }, {
-    question : "How do you get something to happen on your webpage when you click it?",
+    question : "What do I need if I want an event on a mouse click?",
     choiceA : "querySelectorAll",
     choiceB : "make it a button in the HTML",
-    choiceC : "onclick or addEventListner",
+    choiceC : "addEventListener",
     choiceD : "Just click it, man",
     correct : "C"
+}, {
+    question : "What does a function line look like?",
+    choiceA : "for(i = 0; i < length; i++)",
+    choiceB : "var function = x;",
+    choiceC : "console.log('function')",
+    choiceD : "yourFunction();",
+    correct : "D"
+}, {
+    question : "How do you store page data after refresh?",
+    choiceA : "with localStorage",
+    choiceB : "with data-",
+    choiceC : "console.log('storage')",
+    choiceD : "yourStorage();",
+    correct : "A"
+}, {
+    question : "If you don't know, what can you do?",
+    choiceA : "research",
+    choiceB : "quit",
+    choiceC : "be hard on yourself",
+    choiceD : "become a florist",
+    correct : "A"
 }
 ];
 
 //the variables I will need
 var timerCount = document.getElementById("timer-count");
-var timeLeft = 30;
+var timeLeft = 60;
 var score =0;
 var lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 
 //now to manage the timer -- but I haven't been able to clear it for some reason.
-function quizTime(event) {
-    const timerInterval = setInterval(() => {
-        timeLeft--;
-        timerCount.textContent = timeLeft;
-  
-        if(timeLeft === 0) {
-            clearInterval(timerInterval);
-            sendMessage();
-            start.style.display = "block";
-            quiz.style.display = "none";
-        }
-      
-  
-    }, 1000);
-  }
 
 //now to display a question
 function runQuestions(){
     let ques = questions[runningQuestion];
     
-    question.innerHTML = "<p>"+ ques.question +"</p>";
+    question.innerHTML = "<h1>" + ques.question + "</h1>";
     choiceA.innerHTML = ques.choiceA;
     choiceB.innerHTML = ques.choiceB;
     choiceC.innerHTML = ques.choiceC;
@@ -98,6 +104,7 @@ start.addEventListener("click",startQuiz);
 // and quiz go!
 function startQuiz(){
     start.style.display = "none";
+    quizTime();
     runQuestions();
     quiz.style.display = "block";
     console.log("started!")
@@ -116,7 +123,8 @@ function checkAnswer(answer){
         // answer is wrong
         answerIsWrong();
         //take 5 seconds off!
-        timeLeft-=5;
+        timeLeft--;
+        timeLeft--;
         console.log(answer);
         console.log("score: " + score);
     }
@@ -134,6 +142,21 @@ function checkAnswer(answer){
     }
 }
 
+function quizTime(event) {
+    const timerInterval = setInterval(() => {
+        timeLeft--;
+        timerCount.textContent = timeLeft;
+  
+        if(timeLeft === 0) {
+            clearInterval(timerInterval);
+            sendMessage();
+            start.style.display = "block";
+            quiz.style.display = "none";
+        }
+      
+  
+    }, 1000);
+  }
 
 function scoreDisplay(){
     // calculate the amount of question percent answered by the user
@@ -158,7 +181,7 @@ function answerIsCorrect(){
 function answerIsWrong(){
     right.style.display = "none";
     wrong.style.display = "block";
-    wrong.innerHTML = "<h3>" + "Nope...-5 seconds" + "</h3>";
+    wrong.innerHTML = "<h3>" + "Nope! Time penalty!" + "</h3>";
 }
 
 function saveLastScore() {

@@ -9,33 +9,32 @@
     <title>ECMA Quiz</title>
 </head>
 <body>
+
 <header>
     <h3 class="view-scores" id="view-scores" onclick="document.getElementById('saved-user-card').style.display='block'">View High Scores</h3>
-    <h1 class="timer-count" id="timer-count">30</h1>
+    <h1 class="timer-count" id="timer-count">60</h1>
 </header>
-    <main id="root">
-        
-        <div id="card-quiz">
-            <div id="start" onclick="quizTime()">Start Quiz</div>
+    <main>  
+        <h1 id="start">Start Quiz</h1>
             <div id="quiz" style="display: none">
-            <h1 class="question" id="question"></h1>
-            <div id="choices">
-                <br>
-                <h2 class="choice" id="A" onclick="checkAnswer('A')"></h2> 
-                <br>
-                <h2 class="choice" id="B" onclick="checkAnswer('B')"></h2>
-                <br>
-                <h2 class="choice" id="C" onclick="checkAnswer('C')"></h2>
-                <br>
-                <h2 class="choice" id="D" onclick="checkAnswer('D')"></h2>
-                <br>
-                <br>
-                <p class="right" id="right" style="display: none"></p>   
-                <p class="wrong" id="wrong" style="display: none"></p>  
-        </div> 
-    </main> 
-    
-    <section>
+                <h1 class="question" id="question"></h1>
+                    <div id="choices">
+                        <br>
+                        <h2 class="choice" id="A" onclick="checkAnswer('A')"></h2>
+                        <br> 
+                        <h2 class="choice" id="B" onclick="checkAnswer('B')"></h2>
+                        <br>
+                        <h2 class="choice" id="C" onclick="checkAnswer('C')"></h2>
+                        <br>
+                        <h2 class="choice" id="D" onclick="checkAnswer('D')"></h2>
+                        <br>
+                        <br>
+                        <p class="right fade-out-text" id="right" style="display: none"></p>   
+                        <p class="wrong fade-out-text" id="wrong" style="display: none"></p>  
+                    </div>
+            </div>
+    </main>      
+    <section class="score-zone">
         <div id="score-card">
         <div class="results" id="results"></div>
         <br>
@@ -48,13 +47,13 @@
         <input id="user-score" type="text"> score</input>
         <button id="save">SAVE</button>
     </form>
+    <br>
     <div id="saved-user-card" style="display: none">
+        <br>
         <h2>Last Score</h2>
         <p>Initials: <span id="saved-user"></span></p>
         <p>Score: <span id="saved-score"></span></p>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="./Assets/javascript/JQscript.js"></script>
     <script src="./Assets/javascript/ECMAscript.js"></script>
 </body>
 </html>

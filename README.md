@@ -1,99 +1,40 @@
 # 04 Web APIs: Code Quiz
+by Reed Meher, U of MN Coding Bootcamp, 2022.
 
-## Your Task
+## Project Summary
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+We were tasked this week with creating a quiz using Javascript. Below I will describe the function of my coding quiz project.  
 
-To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
+Shout out to all the coders who came before and the wonderful staff at the U of MN coding Bootcamp! This challenge was especially difficult for me: the art of creating and stacking functions has really alluded me up until the last few days before this assigment was due.  After 20+ hours or building, deleting, and rebuilding my function stack and my objects, and almost as many hours researching, I finally found some examples of function stacks that brought it all home (I mean, more home -- I got a long way to go!), and I was able to write a whole new script in a relatively short time. Better still, it had functionality!
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+I was able to pull a lot of the functions and objects from previous efforts to and blend them with my new script.  Then a day of styling with CSS, and here we are! It's not perfect, but I am proud of what I was able to achieve.  
 
-## User Story
+## Site functionality
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+- this is a timed quiz that begins when you click on the "start quiz" text.
 
-## Acceptance Criteria
+- When you click start, the timer in the top left corner activates and the first question displays. 
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
+- when you click an option, the next question will appear in place of the previous. You will also see a message that says if you got the last question right or not. If you get it wrong, there is a 3 second time penality subtracted from the counter.
 
-## Mock-Up
+- If the timer reaches zero before you finish answering the 7 questions, the page is reset to the start screen.
 
-The following animation demonstrates the application functionality:
+- if you complete the quiz within the time limit, your score will be displayed -- in questions answered correctly and your percent. 
 
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
+- you will be prompted to enter your initials and score with a save button that follows. Your score will pop up on the screen with your initials upon saving, and if you refresh the page and click on the "View High Scores" header text, the last score and initials will be displayed. 
 
-## Grading Requirements
+- Complete!
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+Below is a video demo of the quiz I made:
 
-This Challenge is graded based on the following criteria: 
 
-### Technical Acceptance Criteria: 40%
+## Special Thanks
 
-* Satisfies all of the preceding acceptance criteria.
+special thanks to "CodeExpolainedRepo" on Github and Youtube (https://www.youtube.com/c/CodeExplained).  Their scrip† tutorials were especially helpful to my learning style and brought home a bunch of basic things that just weren't clicking for me. For example, I was nesting all my functions within one greater function, rather than stacking a number of smaller functions that all interlock through calling eachother, or executing in the stack order. I learned that functions are less like Troika dolls and more like threads on a spiderweb... and it blew my mind. :)
 
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
+Cheers!
 
 ---
 
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+2022 Reed Meher | Archonology on Github
+reed.meher@gmail.com
