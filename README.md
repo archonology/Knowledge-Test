@@ -33,8 +33,6 @@ A gif demo of deployed page:
 
 ![Coding Quiz Demo_Reed Meher](https://user-images.githubusercontent.com/107374664/182177146-da019d21-4fb5-4b9c-ae0f-54b99765803a.gif)
 
->>>>>>> 14df48d9fe5f753635c6123960f3939019e6d8a8:README.md
-
 ## Special Thanks
 
 special thanks to "CodeExpolainedRepo" on Github and Youtube (https://www.youtube.com/c/CodeExplained).  Their script tutorials were especially helpful to my learning style and brought home a bunch of basic things that just weren't clicking for me. For example, I was nesting all my functions within one greater function, rather than stacking a number of smaller functions that all interlock through calling eachother, or executing in the stack order. I learned that functions are less like Troika dolls and more like threads on a spiderweb... and it blew my mind. :)
