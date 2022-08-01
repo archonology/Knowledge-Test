@@ -1,4 +1,4 @@
-Code Quiz | for Weekly Challenge 4
+# Code Quiz Challenge
 by Reed Meher, U of MN Coding Bootcamp, 2022.
 
 ## Project Summary
@@ -24,9 +24,15 @@ I was able to pull a lot of the functions and objects from previous efforts to a
 - you will be prompted to enter your initials and score with a save button that follows. Your score will pop up on the screen with your initials upon saving, and if you refresh the page and click on the "View High Scores" header text, the last score and initials will be displayed. 
 
 - Complete!
+------------
+A screenshot of the deployed page:
 
-Below is a video demo of the quiz I made:
-[Coding Quiz Demo_Reed Meher.webm](https://user-images.githubusercontent.com/107374664/182175982-211d2e0a-0a47-4b33-b2c4-3f9a7564a01b.webm)
+<img width="1728" alt="Screen Shot 2022-08-01 at 9 49 41 AM" src="https://user-images.githubusercontent.com/107374664/182177005-c45a2b4d-18e8-441b-b17c-9bac8509c763.png">
+
+A gif demo of deployed page:
+
+![Coding Quiz Demo_Reed Meher](https://user-images.githubusercontent.com/107374664/182177146-da019d21-4fb5-4b9c-ae0f-54b99765803a.gif)
+
 
 
 ## Special Thanks
