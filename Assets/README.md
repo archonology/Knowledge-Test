@@ -1,4 +1,4 @@
-# 04 Web APIs: Code Quiz
+# Code Quiz Challenge
 by Reed Meher, U of MN Coding Bootcamp, 2022.
 
 ## Project Summary
@@ -24,13 +24,18 @@ I was able to pull a lot of the functions and objects from previous efforts to a
 - you will be prompted to enter your initials and score with a save button that follows. Your score will pop up on the screen with your initials upon saving, and if you refresh the page and click on the "View High Scores" header text, the last score and initials will be displayed. 
 
 - Complete!
+------------
+A screenshot of the deployed page:
 
-Below is a video demo of the quiz I made:
+<img width="1728" alt="Screen Shot 2022-08-01 at 9 49 41 AM" src="https://user-images.githubusercontent.com/107374664/182177005-c45a2b4d-18e8-441b-b17c-9bac8509c763.png">
 
+A gif demo of deployed page:
+
+![Coding Quiz Demo_Reed Meher](https://user-images.githubusercontent.com/107374664/182177146-da019d21-4fb5-4b9c-ae0f-54b99765803a.gif)
 
 ## Special Thanks
 
-special thanks to "CodeExpolainedRepo" on Github and Youtube (https://www.youtube.com/c/CodeExplained).  Their scrip† tutorials were especially helpful to my learning style and brought home a bunch of basic things that just weren't clicking for me. For example, I was nesting all my functions within one greater function, rather than stacking a number of smaller functions that all interlock through calling eachother, or executing in the stack order. I learned that functions are less like Troika dolls and more like threads on a spiderweb... and it blew my mind. :)
+special thanks to "CodeExpolainedRepo" on Github and Youtube (https://www.youtube.com/c/CodeExplained).  Their script tutorials were especially helpful to my learning style and brought home a bunch of basic things that just weren't clicking for me. For example, I was nesting all my functions within one greater function, rather than stacking a number of smaller functions that all interlock through calling eachother, or executing in the stack order. I learned that functions are less like Troika dolls and more like threads on a spiderweb... and it blew my mind. :)
 
 Cheers!
 
