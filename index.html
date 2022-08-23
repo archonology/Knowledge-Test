@@ -12,9 +12,12 @@
 
 <header>
     <h3 class="view-scores" id="view-scores" onclick="document.getElementById('saved-user-card').style.display='block'">View High Scores</h3>
-    <h1 class="timer-count" id="timer-count">60</h1>
+    
 </header>
-    <main>  
+    <main>
+        <br>
+        <br>
+        <br>  
         <h1 id="start">Start Quiz</h1>
             <div id="quiz" style="display: none">
                 <h1 class="question" id="question"></h1>
@@ -33,7 +36,9 @@
                         <p class="wrong fade-out-text" id="wrong" style="display: none"></p>  
                     </div>
             </div>
-    </main>      
+    </main>
+    <button id="page-refresh" onclick="window.location.reload()" style="display: none">Try Again?</button>
+    <h1 class="timer-count" id="timer-count"style="display: none"></h1>      
     <section class="score-zone">
         <div id="score-card">
         <div class="results" id="results"></div>
@@ -44,15 +49,16 @@
     <form action="input" id="form" style="display: none">
         <h2>Enter your score!</h2>
         <input id="user" type="text"> initials</input>
-        <input id="user-score" type="text"> score</input>
+        
         <button id="save">SAVE</button>
     </form>
     <br>
+    <br>
     <div id="saved-user-card" style="display: none">
         <br>
-        <h2>Last Score</h2>
-        <p>Initials: <span id="saved-user"></span></p>
-        <p>Score: <span id="saved-score"></span></p>
+        <h2>Last Score:</h2>
+        <h5><strong>User: </strong><span id="saved-user"></span></h5>
+        <h5><strong>Score: </strong><span id="saved-score"></span></h5>
     </div>
     <script src="./Assets/javascript/ECMAscript.js"></script>
 </body>

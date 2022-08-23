@@ -85,7 +85,27 @@ main {
 
 
 #saved-user-card {
+    color: var(--green);
+    text-align: center;
+    font-size: xx-large;
+    line-height: 2;
+}
+
+#saved-user-card h2 {
+    text-decoration: underline;
+} 
+#saved-user-card h5 {
     color: var(--gold);
+} 
+
+#page-refresh {
+    color: var(--light);
+    background-color: var(--red);
+    margin: 2em;
+    border-radius: 8px;
+    border-style: none;
+    font-size: x-large;
+    padding: 12px;
 }
 
 #view-scores:hover {
@@ -94,7 +114,7 @@ main {
 }
 
 #start:hover {
-    color: var(--green);
+    color: var(--pink);
     cursor: grab;
 }
 
