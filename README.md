@@ -2,6 +2,7 @@
 by Reed Meher, U of MN Coding Bootcamp, 2022.
 <br>
 Deployed Site: https://archonology.github.io/Coding-Quiz/
+<br>
 gitHub Repo: https://github.com/archonology/Coding-Quiz
 
 ## Project Summary
