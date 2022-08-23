@@ -150,9 +150,12 @@ function quizTime() {
   const timerInterval = setInterval(() => {
     timeLeft--;
     timerCount.textContent = timeLeft;
+    if (timeLeft <= 10) {
+        timerCount.textContent = "Time Warning! Page will reload in " + timeLeft + " seconds";
+      }
     if (timeLeft === 0) {
       clearInterval(timerInterval);
-      sendMessage();
+      window.location.reload();
     }
   }, 1000);
 }
@@ -170,10 +173,6 @@ function scoreDisplay() {
     quiz.style.display = "none";
 }
 
-//for when the timer is up, this message is displayed
-function sendMessage() {
-  timerCount.textContent = "time's up!";
-}
 
 // if the user gets the correct answers
 function answerIsCorrect() {
@@ -186,7 +185,7 @@ function answerIsCorrect() {
 function answerIsWrong() {
   right.style.display = "none";
   wrong.style.display = "block";
-  wrong.innerHTML = "<h3>" + "Nope! Time penalty!" + "</h3>";
+  wrong.innerHTML = "<h3>" + "Nope! -3 seconds!" + "</h3>";
 }
 
 function saveLastScore() {

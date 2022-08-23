@@ -22,8 +22,8 @@ I was able to pull a lot of the functions and objects from previous efforts to a
 - if you complete the quiz within the time limit, your score will be displayed -- in questions answered correctly and your percent. 
 
 - you will be prompted to enter your initials and score with a save button that follows. Your score will pop up on the screen with your initials upon saving, and if you refresh the page and click on the "View High Scores" header text, the last score and initials will be displayed. 
+- a "try again?" button appears upon saving your score. This button triggers the page to be refreshed. 
 
-- Complete!
 ------------
 A screenshot of the deployed page:
 
