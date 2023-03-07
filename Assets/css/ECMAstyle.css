@@ -1,40 +1,59 @@
 :root {
-    --dark: rgb(23, 24, 27);
-    --darker: rgb(33, 25, 44);
+    --dark: rgb(69, 53, 43);
+    --darker: rgba(29, 24, 22, 0.731);
     --light: rgb(215, 220, 228);
-    --pink: rgb(216, 5, 128);
-    --gold: rgb(249, 187, 1);
-    --green: rgb(6, 211, 6);
-    --blue: rgb(10, 168, 253);
-    --red: rgb(251, 7, 7);
+    --gold: rgb(248, 210, 97);
+    --green: rgb(192, 219, 166);
+    --blue: rgb(176, 222, 247);
+}
 
-   
+header {
+    display: block;
+    padding: 2em;
+    margin-bottom: 3em;
 }
 
 body {
     background-color: var(--dark);
+    background-image: url(../images/DSC_0066.JPG);
     color: var(--light);
     margin: 1em;
+
 }
 
-header {
-    display: inline-block;
-    padding: 2em;
+.logo {
+    font-size: 23px;
+    color: var(--green);
+}
+
+a {
+    color: var(--light);
+}
+
+#view-scores {
+    font-style: normal;
+    font-size: 15px;
 }
 
 #timer-count {
-    color: var(--pink);
+    color: var(--blue);
 }
 
 main {
-    border-bottom: 2px solid var(--light);
     text-align: center;
 }
 
+.start-header {
+    display: inline-flex;
+    margin-bottom: 2em;
+}
+
 #start {
-    font-size: xx-large;
-    font-weight: bolder;
-    padding: 1em;
+    font-size: 23px;
+    background-color: var(--darker);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 3px 4px 9px black;
 }
 
 #quiz {
@@ -42,117 +61,108 @@ main {
     margin-right: 20em;
 }
 
-#A {
-    background-color: var(--light);
-    color: var(--dark);
+
+.ques {
+    font-size: larger;
+}
+
+.choice {
+    background-color: var(--darker);
+    color: var(--light);
     padding: 10px;
     margin: 10px;
     border-radius: 8px;
 }
 
-#B {
-    background-color: var(--light);
-    color: var(--dark);
+.message {
+    color: var(--green);
+    font-size: larger;
+}
+
+#form {
+    margin-bottom: 3em;
+}
+
+#save {
+    border: none;
+    background-color: var(--darker);
+    color: var(--light);
     padding: 10px;
-    margin: 10px;
     border-radius: 8px;
 }
 
-#C {
-    background-color: var(--light);
-    color: var(--dark);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 8px;
-}
-
-#D {
-    background-color: var(--light);
-    color: var(--dark);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 8px;
-}
-
-#right {
+.message-wrong {
     color: var(--gold);
-
+    font-size: larger;
 }
-
-#wrong {
-    color: var(--red);
-}
-
 
 #saved-user-card {
-    color: var(--green);
-    text-align: center;
-    font-size: xx-large;
-    line-height: 2;
+    color: var(--light);
+    background-color: var(--darker);
+    padding: 1.5em;
+    box-shadow: 3px 4px 15px black;
 }
 
-#saved-user-card h2 {
-    text-decoration: underline;
-} 
-#saved-user-card h5 {
-    color: var(--gold);
-} 
+#saved-user-card p {
+    color: var(--green);
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 3em;
+    width: 100%;
+    color: var(--light);
+    text-align: center;
+}
+
 
 #page-refresh {
     color: var(--light);
-    background-color: var(--red);
-    margin: 2em;
+    background-color: var(--darker);
+    box-shadow: 3px 4px 15px black;
     border-radius: 8px;
     border-style: none;
     font-size: x-large;
-    padding: 12px;
+    padding: 1.5em;
 }
 
 #view-scores:hover {
-    color: var(--gold);
-    cursor: grab;
+    color: var(--blue);
+    cursor: pointer;
 }
 
 #start:hover {
-    color: var(--pink);
-    cursor: grab;
+    box-shadow: 3px 7px 20px black;
+    background-color: rgba(33, 30, 28, 0.79);
+    cursor: pointer;
 }
 
-#A:hover {
-    background-color: var(--gold);
-    cursor: grab;
-}
-
-#B:hover {
-    background-color: var(--green);
-    cursor: grab;
-}
-
-#C:hover {
-    background-color: var(--blue);
-    cursor: grab;
-}
-
-#D:hover {
-    background-color: var(--red);
+.choice:hover {
+    box-shadow: 3px 4px 17px black;
     cursor: grab;
 }
 
 #save:hover {
-    background-color: var(--green);
+    box-shadow: 3px 7px 20px black;
 }
 
-@media screen and (max-width: 850px){
-    #quiz{
+a:hover {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 850px) {
+    #quiz {
         margin-left: 5em;
         margin-right: 5em;
     }
 }
 
-@media screen and (max-width: 500px){
-    #quiz{
+@media screen and (max-width: 500px) {
+    #quiz {
         margin-left: 1em;
         margin-right: 1em;
     }
 }
-    
