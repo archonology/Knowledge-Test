@@ -101,6 +101,7 @@ main {
     background-color: var(--darker);
     padding: 1.5em;
     box-shadow: 3px 4px 15px black;
+    cursor: default;
 }
 
 #saved-user-card p {
