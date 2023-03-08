@@ -946,39 +946,214 @@ const questions = [
     correct: "D",
   },
   {
-    question: " ",
-    choiceA: " ",
-    choiceB: " ",
-    choiceC: " ",
-    choiceD: " ",
-    correct: " ",
+    question: "What is the proper syntax to include an argument with a query in GraphQL?",
+    choiceA: "person(id: 1234)",
+    choiceB: "person({ id: 1234 })",
+    choiceC: 'person("id", 1234)',
+    choiceD: "person(id=1234)",
+    correct: "A",
   },
   {
-    question: " ",
-    choiceA: " ",
-    choiceB: " ",
-    choiceC: " ",
-    choiceD: " ",
-    correct: " ",
+    question: "What option in the client-side `package.json` file needs to be set up for our React application to prefix API requests to the server with the server's address in development?",
+    choiceA: '"prefix": "http://localhost:3001"',
+    choiceB: '"proxy": "http://localhost:3001"',
+    choiceC: 'develop": "react-scripts develop"',
+    choiceD: '`"proxy": "http://localhost:3001"`, but it goes into the server-side `package.json` instead.',
+    correct: "B",
   },
   {
-    question: " ",
-    choiceA: " ",
-    choiceB: " ",
-    choiceC: " ",
-    choiceD: " ",
-    correct: " ",
+    question: "What are the object properties returned by the `useQuery()` hook?",
+    choiceA: "error and data",
+    choiceB: "error and data",
+    choiceC: "loading, error, data",
+    choiceD: "It will return whatever the name of the query is.",
+    correct: "C",
+  },
+  {
+    question: "What is stored in the array returned by the `useMutation()` hook?",
+    choiceA: "The first position stores a function to execute the mutation and the second position stores an object of data about the current state of the mutation.",
+    choiceB: "The return value of the mutation's execution.",
+    choiceC: "The first position stores an object of data about the current state of the mutation and the second position stores a function to execute the mutation.",
+    choiceD: "It holds loading and error state information about the mutation.",
+    correct: "A",
+  },
+  {
+    question: "Where do we include the functionality for updating the cache when we perform a mutation that creates data?",
+    choiceA: "When we invoke the `useMutation()` hook.",
+    choiceB: "As an argument when we execute the mutation function returned by the `useMutation()` hook.",
+    choiceC: "With the GraphQL mutation.",
+    choiceD: "Apollo Client adds it for us.",
+    correct: "A",
+  },
+  {
+    question: "Which of the following is NOT one of the three main parts of the JSON web token?",
+    choiceA: "Signature",
+    choiceB: "Header",
+    choiceC: "Payload",
+    choiceD: "Secret",
+    correct: "D",
+  },
+  {
+    question: "What do we use the `jwt-decode` library for?",
+    choiceA: "Sign a JSON web token",
+    choiceB: "Reading data from a signed JSON web token",
+    choiceC: "Validate a JSON web token",
+    choiceD: "Create a JSON web token with a secret and expiration",
+    correct: "B",
+  },
+  {
+    question: "Which of the following is the correct way to add an authentication token to an HTTP header?",
+    choiceA: '{ "Authentication": "Bearer <token>" }',
+    choiceB: '{ "Authorization": "Bearer <token>" }',
+    choiceC: '{ "Authorization": "Basic <token>" }',
+    choiceD: '{ "Authentication": "Basic <token>" }',
+    correct: "B",
+  },
+  {
+    question: "Which of the following can you do with GitHub Actions?",
+    choiceA: "Create a GitHub Action to automatically run a linter against every pull request to ensure the code meets your agreed upon standards",
+    choiceB: "Host an Express.js server on GitHub's servers",
+    choiceC: "Use JSX to define the events, jobs, and steps",
+    choiceD: "Create a pull request from the command line",
+    correct: "A",
+  },
+  {
+    question: "Although we can technically build whatever we want in MERN, what is NOT the best use case for this stack?",
+    choiceA: "Applications that are JSON-heavy",
+    choiceB: "Applications at the enterprise level",
+    choiceC: "Applications that are cloud-native",
+    choiceD: "Applications that have dynamic web interfaces",
+    correct: "B",
+  },
+  {
+    question: "What is the purpose of the Provider component?",
+    choiceA: "The <Provider> component makes a given context available to any nested components that need access to global state.",
+    choiceB: "The <Provider> component consumes state from nested components and passes data up to the parent component.",
+    choiceC: "The <Provider> component is required to render any elements to the page.",
+    choiceD: "The <Provider> component allows you to make fetch and retrieve data from third party APIs.",
+    correct: "A",
+  },
+  {
+    question: "What is the purpose of the Consumer component?",
+    choiceA: "The <Consumer> component allows nested components to subscribe to a given context within a functional component.",
+    choiceB: "The <Consumer> component allows usage of user input from forms or input fields inside a component.",
+    choiceC: "The <Consumer> component accepts a value prop that gets passed to any component within the Consumer.",
+    choiceD: "The <Consumer> component is needed to consume network requests from a server.",
+    correct: "A",
+  },
+  {
+    question: "Which of the following statements regarding Reducers is FALSE?",
+    choiceA: "Reducers are not able to modify the existing state. Instead, they must make immutable updates, by copying the existing state and making changes to the copied values.",
+    choiceB: "Reducers can utilize switch statements to perform the appropriate action.",
+    choiceC: "Reducers are functions that take the current state and an action as arguments and return a new state.",
+    choiceD: "A Reducer is a form of middleware that compresses minifies your React application before sending it to the client",
+    correct: "D",
+  },
+  {
+    question: "Which of the following accurately describes an action as they relate to Reducer functions?",
+    choiceA: "Actions are functions that update data locally inside a component.",
+    choiceB: "Actions refer to anything inside the `actions.js` file and are nothing more than variables set to the value of a string.",
+    choiceC: "Actions is the name of a third party npm package used to reflect changes to the virtual DOM.",
+    choiceD: "Actions are JavaScript objects that have a `type` and an optional `payload` property. Actions represent events that can take place within an application. They describe an intent to mutate data.",
+    correct: "D",
+  },
+  {
+    question: "Which of the following is a correct implementation of the `useReducer` hook inside a functional React component?",
+    choiceA: "import React, {useReducer} from 'react'; import { reducer } from '../utils/reducers'; const initialState = { count: 0 }; export default function count Component() { const [state, dispatch] = useReducer(reducer, initialState); return <div> the value of count is {state.count} </div>; }",
+    choiceB: "import React, {useState} from 'react'; import { reducer } from '../utils/reducers'; const initialState = { count: 0 }; export default function count Component() { const [state, dispatch] = useState(reducer, initialState); return <div> the value of count is {state.count} </div>; }",
+    choiceC: "import React, {useReducer} from 'react'; const initialState = { count: 0 }; export default function count Component() { const [state, dispatch] = useReducer(); return <div> the value of count is {state.count} </div>; }",
+    choiceD: "const useReducer = (state, action) => newState",
+    correct: "A",
+  },
+  {
+    question: "Which of the following is NOT a built-in React hook?",
+    choiceA: "useAnchor()",
+    choiceB: "useState()",
+    choiceC: "useContext()",
+    choiceD: "useEffect()",
+    correct: "A",
+  },
+  {
+    question: "Which one of the following statements regarding React Router is TRUE?",
+    choiceA: "The react-router-dom package is built-in to React and available for use after running create-react-app",
+    choiceB: "<Link> components can existing without being nested inside a <Router> component.",
+    choiceC: "<BrowserRouter> makes use of the history API built in to most modern web browsers.",
+    choiceD: "<Link> components also use 'href' attributes to specify what route to use.",
+    correct: "C",
+  },
+  {
+    question: "Where do we include the functionality for updating the cache when we perform a mutation that creates data?",
+    choiceA: "As an argument when we execute the mutation function returned by the `useMutation()` hook.",
+    choiceB: "With the GraphQL mutation.",
+    choiceC: "When we invoke the `useMutation()` hook.",
+    choiceD: "Apollo Client adds it for us.",
+    correct: "C",
+  },
+  {
+    question: "Which of the following is the correct way to add an authentication token to an HTTP header?",
+    choiceA: '{ "Authentication": "Basic <token>" }',
+    choiceB: '{ "Authorization": "Basic <token>" }',
+    choiceC: '{ "Authentication": "Bearer <token>" }',
+    choiceD: '{ "Authorization": "Bearer < token > " }',
+    correct: "D",
+  },
+  {
+    question: "Which of the following are returned from the useReducer hook?",
+    choiceA: "An array containing a state object and a dispatch function.",
+    choiceB: "A copy of state",
+    choiceC: "The reducer function",
+    choiceD: "An array containing the possible actions for a reducer and the reducer function itself.",
+    correct: "A",
+  },
+  {
+    question: "Which of the following code snippets is valid syntax for a type definition that can be used with Apollo Client?",
+    choiceA: "interface Author { id: number; description: string; }",
+    choiceB: 'gql` type Author { id: 5 firstName: "admin", lastName: "root", posts: postsArr }`',
+    choiceC: "type Author { id: Int! firstName: String lastName: String posts: [Post] }",
+    choiceD: "gql` type Author { id: Int! firstName: String lastName: String posts: [Post] }`",
+    correct: "D",
+  },
+  {
+    question: "Which of the following statements accurately how Stripe can be useful to developers?",
+    choiceA: "Stripe is a online payment processing service that offers developers easy-to-use APIs for making secure transactions in web apps.",
+    choiceB: "Stripe is a lightweight CSS framework that can be added to any project using a CDN or by adding to your project using npm.",
+    choiceC: "Stripe is a third party npm package that allows developers to send and receive HTTP requests with a few lines of code.",
+    choiceD: "Stripe is a cloud provider that will host and and provision your own online store.",
+    correct: "A",
+  },
+  {
+    question: 'Given an action called "UPDATE_ACCOUNT_NAME", what is the proper syntax for dispatching an action in a functional component using the useReducer hook?',
+    choiceA: "store.dispatch(UPDATE_ACCOUNT_NAME(newName))",
+    choiceB: "dispatch({ type: UPDATE_ACCOUNT_NAME, userName: newName, }); //(The dispatch method gets returned from the useContext hook and accepts an object as an argument. The correct syntax is such that dispatch is invoked like any other function. It is then passed an object containing type and optional payload properties.)",
+    choiceC: "dispatch([UPDATE_ACCOUNT_NAME, newName])",
+    choiceD: "const updateAccountName = dispatch(newname)",
+    correct: "B",
+  },
+  {
+    question: "In order to create a GitHub workflow that will create a CI/CD pipeline to Heroku, what folders and file need to be created at the root of the repository?",
+    choiceA: ".github/workflows/main.yml // When pushing a repository, GitHub will automatically look for a hidden folder called `.github` for any special configurations. To create a workflow, a workflows folder must be created inside the hidden `.github` folder, and inside of it a `.yml` file which contains all the instructions to deploy to Heroku.",
+    choiceB: "main.yml",
+    choiceC: ".github/workflows/main.procfile",
+    choiceD: "workflows/main.yml",
+    correct: "A",
+  },
+  {
+    question: "Which of the following hooks is unique to Redux?",
+    choiceA: "useEffect()",
+    choiceB: "useSelector() // This hook allows access to data from the Redux store state, using a selector function. A selector function simply gets and returns data from state.",
+    choiceC: "useState()",
+    choiceD: "useContext()",
+    correct: "B",
   },
 ];
 
-//the variables I will need
+
 var timerCount = document.getElementById("timer-count");
 var timeLeft = 30;
 var score = 0;
 var lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 
-//now to manage the timer -- but I haven't been able to clear it for some reason.
 
 //now to display a question
 function runQuestions() {
@@ -1061,7 +1236,7 @@ function checkAnswer(answer) {
     form.style.display = "block";
   }
 }
-// I really don't understand how to get this timer to clear function at the quiz end. it seems like I need a const that is global, else the other functions aren't readinging the "timerInterval" or clearInterval...
+
 // function quizTimeStop() {
 //       timerCount.style.display = "none";
 //       quiz.style.display = "none";
@@ -1132,8 +1307,9 @@ function renderLastScore() {
   }
 }
 
-//click to start
+// click to start test handling
 start.addEventListener("click", startQuiz);
+// handle back and forward buttons
 back.addEventListener("click", backQuestion);
 forward.addEventListener("click", forwardQuestion);
 
@@ -1142,7 +1318,6 @@ save.addEventListener("click", function (event) {
   saveLastScore();
   renderLastScore();
   window.location.reload();
-  // document.getElementById("page-refresh").style.display = "block";
 });
 
 // The init() function fires when the page is loaded
