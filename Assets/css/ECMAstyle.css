@@ -179,14 +179,14 @@ a:hover {
 }
 
 @media screen and (max-width: 850px) {
-    #quiz {
+    #quiz, #saved-user-card {
         margin-left: 5em;
         margin-right: 5em;
     }
 }
 
 @media screen and (max-width: 500px) {
-    #quiz {
+    #quiz, #saved-user-card {
         margin-left: 1em;
         margin-right: 1em;
     }
