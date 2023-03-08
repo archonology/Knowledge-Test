@@ -3,6 +3,8 @@ const topCard = document.getElementById("top-card");
 const viewScores = document.getElementById("view-scores");
 const cardQuiz = document.getElementById("card-quiz");
 const start = document.getElementById("start");
+const back = document.getElementById("back");
+const forward = document.getElementById("forward");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
 const choiceA = document.getElementById("A");
@@ -604,7 +606,38 @@ function runQuestions() {
   choiceC.innerHTML = ques.choiceC;
   choiceD.innerHTML = ques.choiceD;
 
-  console.log(runningQuestion);
+}
+
+function backQuestion() {
+
+  if (!runningQuestion > 0) {
+
+    return runQuestions();
+
+  } else {
+
+    runningQuestion--;
+    runQuestions();
+
+  }
+
+
+}
+
+function forwardQuestion() {
+
+  if (runningQuestion == lastQuestion) {
+
+    return false;
+
+  } else {
+
+    runningQuestion++;
+    runQuestions();
+
+  }
+
+
 }
 
 
@@ -620,7 +653,7 @@ function startQuiz() {
 // to check the answers
 
 function checkAnswer(answer) {
-  if (answer == questions[runningQuestion].correct) {
+  if (answer == questions[runningQuestion].correct || answer == questions[runningQuestion - 1].correct) {
     // answer is correct
     score++;
     answerIsCorrect();
@@ -628,8 +661,8 @@ function checkAnswer(answer) {
     // answer is wrong
     answerIsWrong();
     //time penalty!
-    timeLeft--;
-    timeLeft--;
+    // timeLeft--;
+    // timeLeft--;
   }
   count = 0;
   //this gets us to the wrap up after the last question is answered
@@ -717,6 +750,8 @@ function renderLastScore() {
 
 //click to start
 start.addEventListener("click", startQuiz);
+back.addEventListener("click", backQuestion);
+forward.addEventListener("click", forwardQuestion);
 
 save.addEventListener("click", function (event) {
   event.preventDefault();
