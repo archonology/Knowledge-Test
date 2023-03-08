@@ -36,4 +36,4 @@ If you have questions about this project or any of my other work, please contact
 
 ## Kudos
 
-Kudos to the U of MN Bootcamp for the unit self-test questions I borrowed for this app! If there is a copyright problem with that, or such, please reach out and let me know, and I will put this repository on private mode. This app doesn't provide the correct answers unless properly guessed, and the tests I borrowed the questions from are intended for personal review and development with some core full-stack development concepts.
+Kudos to the U of MN Bootcamp for the unit self-test questions I adapted for this app! This app doesn't provide the correct answers unless properly guessed, and the questions are intended for personal review and development with some core full-stack development concepts.
