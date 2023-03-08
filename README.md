@@ -6,7 +6,7 @@ Live at: https://archonology.github.io/Coding-Quiz/
 
 ## Screenshot
 
-![screenshot of app](./Assets/images/Screen%20Shot%202022-08-23%20at%202.45.51%20PM.png);
+![screenshot of app](./Assets/images/screenshot.png)
 
 ## Table of Contents:
 

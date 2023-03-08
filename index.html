@@ -25,18 +25,23 @@
         </div>
 
         <div id="quiz" style="display: none">
-            <p id="back">previous question</p>
+
             <div class="question" id="question"></div>
             <div id="choices">
                 <br>
                 <p class="choice" id="A" onclick="checkAnswer('A')"></p>
-                <br>
                 <p class="choice" id="B" onclick="checkAnswer('B')"></p>
-                <br>
                 <p class="choice" id="C" onclick="checkAnswer('C')"></p>
-                <br>
                 <p class="choice" id="D" onclick="checkAnswer('D')"></p>
                 <br>
+                <div class="container">
+                    <div class="back">
+                        <p id="back">back</p>
+                    </div>
+                    <div class="forward">
+                        <p id="forward">next</p>
+                    </div>
+                </div>
                 <br>
                 <p class="right fade-out-text" id="right" style="display: none"></p>
                 <p class="wrong fade-out-text" id="wrong" style="display: none"></p>

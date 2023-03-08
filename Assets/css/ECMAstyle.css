@@ -57,10 +57,22 @@ main {
 }
 
 #quiz {
-    margin-left: 20em;
-    margin-right: 20em;
+    margin-left: 15em;
+    margin-right: 15em;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    color: var(--blue);
+}
+
+.forward {
+    color: var(--blue);
+}
 
 .ques {
     font-size: larger;
@@ -69,9 +81,9 @@ main {
 .choice {
     background-color: var(--darker);
     color: var(--light);
-    padding: 10px;
-    margin: 10px;
+    padding: 1.5em;
     border-radius: 8px;
+    box-shadow: 2px 2px 9px black;
 }
 
 .message {
@@ -102,6 +114,8 @@ main {
     padding: 1.5em;
     box-shadow: 3px 4px 15px black;
     cursor: default;
+    margin-left: 15em;
+    margin-right: 15em;
 }
 
 #saved-user-card p {
@@ -140,8 +154,18 @@ footer {
     cursor: pointer;
 }
 
+.back:hover {
+    cursor: pointer;
+    color: var(--green);
+}
+
+.forward:hover {
+    cursor: pointer;
+    color: var(--green);
+}
+
 .choice:hover {
-    box-shadow: 3px 4px 17px black;
+    box-shadow: 1px 3px 15px black;
     cursor: grab;
 }
 
