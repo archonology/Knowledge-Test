@@ -2,7 +2,7 @@
 
 ## Link
 
-Live at: https://archonology.github.io/Coding-Quiz/
+Live at: https://archonology.github.io/Knowledge-Test/
 
 ## Screenshot
 
