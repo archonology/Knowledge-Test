@@ -1212,11 +1212,14 @@ function startQuiz() {
 // to check the answers
 
 function checkAnswer(answer) {
-  if (answer == questions[runningQuestion].correct || answer == questions[runningQuestion - 1].correct) {
+  if (answer == questions[runningQuestion].correct) {
     // answer is correct
     score++;
+    console.log(score);
     answerIsCorrect();
   } else {
+    score--;
+    console.log(score);
     // answer is wrong
     answerIsWrong();
     //time penalty!
