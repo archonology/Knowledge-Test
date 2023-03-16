@@ -373,7 +373,7 @@ const questions = [
     question: "Which of the following is the best definition for the DELETE command in MySQL?",
     choiceA: "The DELETE command removes one or more columns from a table.",
     choiceB: "The DELETE command removes a table from a database.",
-    choiceC: "Not quite. We use mysql2 to connect an existing database to an Express server To do so, we 1) Install the Node MySQL package, 2)Initialize the connection 3)Perform a query using query().",
+    choiceC: "When used with a WHERE clause, it will delete a specific record in a table. Without the where clause, it will delete all records in a table.",
     choiceD: "The DELETE command drops a database if it exists.",
     correct: "C",
   },
@@ -419,10 +419,10 @@ const questions = [
   },
   {
     question: "Which of the following Git command will allow us to bring specific commit into a branch we are working on?",
-    choiceA: "git cherry-pick `<hash>`",
-    choiceB: "git cherry-pick `<branch-name>`",
-    choiceC: "git cherry-pick `<commit-message>`",
-    choiceD: "git cherry-pick `<log>`",
+    choiceA: "git cherry-pick <hash>",
+    choiceB: "git cherry-pick <branch-name>",
+    choiceC: "git cherry-pick <commit-message>",
+    choiceD: "git cherry-pick <log>",
     correct: "A",
   },
   {
