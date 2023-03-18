@@ -790,7 +790,7 @@ const questions = [
     choiceA: "Rich interactions",
     choiceB: "Enables partial page loading",
     choiceC: "Better SEO",
-    choiceD: "Better SEO",
+    choiceD: "Don't need a different HTML page per route",
     correct: "C",
   },
   {
@@ -842,7 +842,7 @@ const questions = [
     correct: "A",
   },
   {
-    question: "Which of the following statements is true rendering rendering elements in React?",
+    question: "Which of the following statements is true regarding rendering elements in React?",
     choiceA: "React elements are costly to memory.",
     choiceB: "React elements are objects that represent JSX elements. React elements also describe what you see on the screen. An element is not an instance of an object, instead it is a way to tell React what you want to see on the screen.",
     choiceC: "React components and React elements are the same thing.",
@@ -1151,8 +1151,8 @@ const questions = [
 var timerCount = document.getElementById("timer-count");
 var timeLeft = 30;
 var score = 0;
-var lastQuestion = questions.length - 1;
-let runningQuestion = 0;
+var lastQuestion = 0;
+let runningQuestion = questions.length - 1;
 
 
 //now to display a question
@@ -1169,13 +1169,13 @@ function runQuestions() {
 
 function backQuestion() {
 
-  if (!runningQuestion > 0) {
+  if (runningQuestion == lastQuestion) {
 
-    return runQuestions();
+    return false;
 
   } else {
 
-    runningQuestion--;
+    runningQuestion++;
     runQuestions();
 
   }
@@ -1191,7 +1191,7 @@ function forwardQuestion() {
 
   } else {
 
-    runningQuestion++;
+    runningQuestion--;
     runQuestions();
 
   }
@@ -1228,8 +1228,8 @@ function checkAnswer(answer) {
   }
   count = 0;
   //this gets us to the wrap up after the last question is answered
-  if (runningQuestion < lastQuestion) {
-    runningQuestion++;
+  if (runningQuestion > lastQuestion) {
+    runningQuestion--;
     runQuestions();
   } else {
     //end the quiz and show the score
